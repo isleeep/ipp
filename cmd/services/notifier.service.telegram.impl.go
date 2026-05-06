@@ -41,7 +41,7 @@ func (s *NotifierServiceTelegramImpl) SendNotification(newIp string) error {
 		wg.Add(1)
 		go func(v string) {
 			defer wg.Done()
-			reqUrl := fmt.Sprintf("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s", s.telegramBotToken, v, url.QueryEscape(msg))
+			reqUrl := fmt.Sprintf("https://tg.987678.xyz/bot%s/sendMessage?chat_id=%s&text=%s", s.telegramBotToken, v, url.QueryEscape(msg))
 			ctx, cancel := context.WithTimeout(context.Background(), 30 * time.Second)
 			defer cancel()
 			req, err := http.NewRequestWithContext(
