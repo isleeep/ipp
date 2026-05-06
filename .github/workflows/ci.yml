@@ -27,7 +27,7 @@ jobs:
           file: Dockerfile
           target: server
           push: true
-          tags: islsp/ippp:latest
+          tags: islsp/npp:latest
           platforms: linux/amd64,linux/arm64
 
       - name: Docker Hub Description
@@ -35,4 +35,4 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: islsp/ippp
+          repository: islsp/npp
