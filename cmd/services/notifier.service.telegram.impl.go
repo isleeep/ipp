@@ -29,10 +29,8 @@ func NewNotifierServiceTelegramImpl(telegramBotToken string, telegramChatIds []s
 
 func (s *NotifierServiceTelegramImpl) SendNotification(newIp string) error {
 	msg := fmt.Sprintf(
-		"设备 '%s' IP变动 %s\n",
-		s.deviceName,
+		"设备IP变动 %s\n",
 		newIp,
-		s.deviceName,
 	)
 
 	var wg sync.WaitGroup
