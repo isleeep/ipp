@@ -29,7 +29,7 @@ func NewNotifierServiceTelegramImpl(telegramBotToken string, telegramChatIds []s
 
 func (s *NotifierServiceTelegramImpl) SendNotification(newIp string) error {
 	msg := fmt.Sprintf(
-		"The IP of your device:'%s' has changed, new IP:\n%s\n\nWith love,\n%s.",
+		"设备 '%s' IP变动 %s\n",
 		s.deviceName,
 		newIp,
 		s.deviceName,
